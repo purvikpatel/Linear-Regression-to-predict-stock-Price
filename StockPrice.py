@@ -29,8 +29,6 @@ get_data('aapl.csv')
 model = linear_model.LinearRegression()
 model.fit(X,y)
 
-Y = model.predict(X)
+for xs in X:
+    print(model.predict(xs))
 
-plt.scatter(dates,y ,  color='black')
-plt.plot(dates, Y, color='blue', linewidth=3)
-plt.show()
